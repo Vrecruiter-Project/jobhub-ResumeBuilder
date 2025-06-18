@@ -45,7 +45,7 @@ function Home() {
             <div ref={targetSectionRef}>
                 <div className='d-flex justify-content-center mt-5' >
 
-                    <h3 className='p-2 rounded' style={{ backgroundColor: 'aliceblue' }}>Select a Template to get started!</h3>
+                    <h3 className='p-2 rounded' style={{ backgroundColor: 'aliceblue' }}>Select a Template to get started! Choose Best One</h3>
                 </div>
             </div>
 
