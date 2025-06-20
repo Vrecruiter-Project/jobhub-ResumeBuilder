@@ -19,8 +19,7 @@
 
 .aboutbtn:hover {
   color: #8afa8d; 
-  text-decoration: underline; 
-}
+  text-decoration: underline; }
 .block{
   display: block;
   background-color: rgba(50,50,50,0.5);
@@ -33,25 +32,32 @@
 /* The side navigation menu */
 .sidebar {
   margin: 0;
-  padding: 50px 20px;
+  padding: 2px 20px;
   height: 100%;
   overflow: auto;
 }
 
+.col-lg-3.col-sm-12.col-12.sidebar {
+  text-align: -webkit-center;
+}
 /* Sidebar links */
 .sidebar li {
+  width: 60%;
   display: block;
-  border: 1px solid #4f81c7;
-  padding: 16px;
+  border: 1px solid #959792;
+  padding: 1px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px; 
 }
 
-/* Links on mouse-over */
-.sidebar li:hover{
-  background-color:white;
-  ;
+.sidebar li a{
+  text-decoration: none;
+  color: black;
 }
+.sidebar li a:hover{
+  color: #316900;
+}
+/* Links on mouse-over */
 
 /* Page content.  */
 div.content {

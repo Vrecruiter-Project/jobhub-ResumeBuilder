@@ -1,106 +1,92 @@
 import React from 'react';
-import { FileEarmarkTextFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
-import Logo from './Images/JOBHUB_lOGO.svg';
-// D:\Training\Resume Builder\New folder\Resume-Builder\src\App.css
+import Logo from './Images/JOBHUB_lOGO.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
+
 function NavBar() {
   return (
-    <div style={{ backgroundColor: '#bfe9db', color: '#07588a', zIndex: 10 }}>
-      <nav className='navbar navbar-expand-xl navbar-light p-0 m-0 '>
-        <div style={{
-          height: '100px',
-        }} className='container-fluid w-100 '>
-          <div
-            className='navbar-brand d-flex justify-conent-space-between'
-            style={{ color: '#07588a', fontSize: '30px', fontWeight: '600' }}
+    <>
+      <Navbar
+        key="md"
+        expand="md"
+        style={{
+          backgroundColor: '#ffffff',
+          color: '#07588a',
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+          zIndex: 10,
+          padding: '10px 20px',
+          height:{xs:'10px', md:'0px', lg:'20px'}
+        }}
+      >
+        <Container fluid>
+          <Navbar.Brand href="https://www.jobhub.world/" className="d-flex align-items-center">
+            <img src={Logo} alt="JobHub Logo" width={100} className="me-2" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand-md`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+            placement="end"
+            style={{ backgroundColor: '#ffffff' }}
           >
-            <div className='me-3  '>
-              <a href='https://www.jobhub.world/'>
-                <img src={Logo} alt='' width={120} />
-              </a>
-            </div>
-            <div className=' flex-grow-1'></div>
-          </div>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#navbarSupportedContent'
-            aria-controls='navbarSupportedContent'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div
-            className='collapse navbar-collapse  '
-            id='navbarSupportedContent'
-          >
-            <div className='flex-grow-1'></div>
-            <div className='navbar-nav mb-2 ms-5 '>
-              <li className='nav-item '>
-                {/* /*this link will show the Home page */}
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title
+                id={`offcanvasNavbarLabel-expand-md`}
+                style={{ color: '#07588a' }}
+              >
+                <Navbar.Brand href="https://www.jobhub.world/" className="d-flex align-items-center">
+            <img src={Logo} alt="JobHub Logo" width={100} className="me-2" />
+          </Navbar.Brand>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Link
-                  to='/'
-                  className='nav-link active me-4'
+                  to="/"
+                  className="nav-link me-4"
                   style={{
+                    color: '#333',
+                    fontSize: '18px',
                     textDecoration: 'none',
-                    color: '#07588a',
-                    fontSize: '20px',
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'green';
-                    // e.currentTarget.style.border = '2px solid rgb(0, 0, 0)';
-                  }} // Change color on hover
-              
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'green')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#07588a')}
                 >
                   Resume Templates
                 </Link>
-              </li>
-              <li className='nav-item'>
-                {/* this link will show the MyResume page displaying the preview of the resume created by the user. */}
                 <Link
-                  to='/myresume'
-                  className='nav-link active me-4'
+                  to="/myresume"
+                  className="nav-link me-4"
                   style={{
+                    color: '#333',
+                    fontSize: '18px',
                     textDecoration: 'none',
-                    color: '#07588a',
-                    fontSize: '20px',
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'green';
-                    // e.currentTarget.style.border = '2px solid rgb(0, 0, 0)';
-                  }} // Change color on hover
-                 
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'green')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#07588a')}
                 >
                   My Resume
                 </Link>
-              </li>
-              <li className='nav-item'>
-                {/* this link will show the About Us page. */}
-                <Link
-                  to='/about'
-                  className='aboutbtn nav-link active '
+                {/* <Link
+                  to="/about"
+                  className="nav-link"
                   style={{
+                    color: '#333',
+                    fontSize: '18px',
                     textDecoration: 'none',
-                    color: '#07588a',
-                    fontSize: '20px',
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'green';
-                    // e.currentTarget.style.border = '2px solid rgb(0, 0, 0)';
-                  }} // Change color on hover
-                
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'green')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#07588a')}
                 >
                   About Us
-                </Link>
-              </li>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+                </Link> */}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Card, CardContent, Grid2 } from '@mui/material';
-import Our_Vission_Mission_Image from './Images/Our_Vission_Mission_Image.png';
+import Our_Vission_Mission_Image from './Images/AboutUsVector.svg';
 
 const MissionVisionSection = () => {
   return (
@@ -18,7 +18,8 @@ const MissionVisionSection = () => {
               borderRadius: 2,
               objectFit: 'cover',
               marginBottom: '-65px',
-              display:{xs:'none' , lg:'flex'}
+              display:{xs:'none' , lg:'flex'},
+              paddingRight:'15px'
             }}
           />
         </Grid2>

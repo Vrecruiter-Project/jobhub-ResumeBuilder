@@ -1,12 +1,11 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import shortid from 'shortid';
+import { updatePersonalInfo } from '../../ReduxManager/dataStoreSlice';
 
 function Template1() {
     const dataStore = useSelector(state => state.dataStore);
     const personalInfo = useSelector(state => state.dataStore.personalInfo);
-
-    
     return ( 
         <div className="px-1" style={{ backgroundColor: "white", display: "flex", flexDirection: "column", height:'1700px'}}>
             <div style={{ flex: 1 }}>

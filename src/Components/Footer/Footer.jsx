@@ -99,9 +99,9 @@ const Footer = () => {
             </Typography>
             <Box sx={{ mt: 1, textAlign: { xs: 'center', sm: 'left' } }}>
               <Typography variant='body2'>
-                Email: support@jobhub.world
+                Email: vrecruitersofficial@gmail.com
               </Typography>
-              <Typography variant='body2'>Phone: +91 9518035030</Typography>
+              <Typography variant='body2'>Phone: +91 8512827174</Typography>
             </Box>
           </Box>
         </Grid>
