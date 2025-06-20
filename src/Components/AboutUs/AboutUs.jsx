@@ -33,7 +33,8 @@ function AboutUs() {
                 imgSrc={AboutHeaderImage}
                 style={{
                     width: "75%",
-                    height: "auto",  
+                    height: "auto", 
+                    marginTop:'20px' 
                     }}
                     buttonAction2={scrollToSection}
             />   

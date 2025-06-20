@@ -1,9 +1,9 @@
-import resume1 from './images/resume1.jpg';
-import resume2 from './images/resume2.jpg';
-import resume3 from './images/resume3.jpg';
-import resume4 from './images/resume4.jpg';
-import resume5 from './images/resume5.jpg';
-import resume6 from './images/resume6.jpg';
+import resume1 from './images/resume1.svg';
+import resume2 from './images/resume2.svg';
+import resume3 from './images/resume3.svg';
+import resume4 from './images/resume4.svg';
+import resume5 from './images/resume 5.svg';
+import resume6 from './images/resume 6.svg';
 import resume7 from './images/resume7.jpg';
 import resume8 from './images/resume8.jpg';
 import resume9 from './images/resume9.jpg';

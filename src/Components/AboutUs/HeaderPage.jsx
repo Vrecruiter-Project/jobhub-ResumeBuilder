@@ -22,7 +22,7 @@ const HeaderPage = ({ backgroundImage, headerText, subText, buttonTitle1, button
         backgroundPosition: "100%",
         backgroundSize: "cover",
         width: '100%',
-        py: { xs: 5, sm: 3 },
+        py:{xs:15,sm:15, md:15, lg:0 },
         height: "auto",
       }}>
         <Grid2 container
@@ -66,7 +66,7 @@ const HeaderPage = ({ backgroundImage, headerText, subText, buttonTitle1, button
             <Typography
               sx={{
                 width: "100%",
-                fontSize: "19px",
+                fontSize: {xs:"12px", sm:"16px"},
                 fontFamily: '"Roboto", sans-serif',
                 fontWeight: "bold",
                 textAlign: { xs: "center", md: "left" },

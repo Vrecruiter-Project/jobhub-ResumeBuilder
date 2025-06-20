@@ -25,12 +25,12 @@ function App() {
         }
     }
     return (
-        <div className="container">
+        <div className="container d-flex align-items-center gap-3">
     
-            <div className="row">
+            <div className="row ">
                 <img style={{height:'50px', width:'50px', background:'grey',padding:0, borderRadius:'50%', objectFit:'cover'}} src={imageFile} alt='profile'/>
             </div>
-            <div className="row">
+            <div className="row ">
                 <input type="file" onChange={handleChange} />
             </div>
             

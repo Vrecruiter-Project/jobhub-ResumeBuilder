@@ -48,22 +48,22 @@ function DetailsFillingPage() {
                     <div className=" col-lg-3 col-sm-12 col-12 sidebar"  >
                             <li className="list-item" onClick={onSideNavLinkClick}>
                               {/* condition is applied to the Link when 'isFormValid'=== true, then the link is active and directs the user to the next page otherwise the link is inactive */}
-                                <Link to = {isFormValid?"/detailsfillingpage/personalinfo":'#'} className='no-text-decoration'>
+                                <Link to = {isFormValid?"/detailsfillingpage/personalinfo":'#'} className=''>
                                   Personal Info
                                 </Link>
                             </li>
                             <li className=" list-item" onClick={onSideNavLinkClick}>
-                                <Link to = {isFormValid?"/detailsfillingpage/workex":'#'} className='no-text-decoration' style={{fontSize:'inherit'}}>
+                                <Link to = {isFormValid?"/detailsfillingpage/workex":'#'} className='' style={{fontSize:'inherit'}}>
                                 Work Experience
                                 </Link>
                             </li>
                             <li className=" list-item" onClick={onSideNavLinkClick}>
-                                <Link to = {isFormValid?"/detailsfillingpage/education":'#'} className='no-text-decoration'>
+                                <Link to = {isFormValid?"/detailsfillingpage/education":'#'} className=''>
                                   Education
                                 </Link>
                             </li>
                             <li className=" list-item" onClick={onSideNavLinkClick}>
-                                <Link to = {isFormValid?"/detailsfillingpage/keyskills":'#'} className='no-text-decoration'>
+                                <Link to = {isFormValid?"/detailsfillingpage/keyskills":'#'} className=''>
                                   Key Skills
                                 </Link>
                             </li>

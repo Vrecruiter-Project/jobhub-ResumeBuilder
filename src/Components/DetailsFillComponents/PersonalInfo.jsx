@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ProfilePicUploadComponent from './ProfileUpload';
 import { stateNames } from '../Data/Data';
@@ -9,8 +9,26 @@ import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/data
 
 // This component renders the Personal Info page inside the details filling page.
 function PersonalInfo(props) {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
   const personalInfo = useSelector(state => state.dataStore.personalInfo); // This state is used to store personalInfo object of dataStoreSlice.
   const dispatch = useDispatch();
+
+
+useEffect(() => {
+  const savedInfo = JSON.parse(localStorage.getItem('resumeInfo'));
+  if (savedInfo) {
+    for (const key in savedInfo) {
+  dispatch(updatePersonalInfo({ key, value: savedInfo[key] }));
+}
+
+  }
+  setIsLoaded(true);
+}, [])
+
+useEffect(() => {
+  localStorage.setItem('resumeInfo', JSON.stringify(personalInfo));
+}, [personalInfo]);
 
   const onChangeHandler = (key, value, errorMessage) => {
     dispatch(updatePersonalInfo({ key, value }));
@@ -21,7 +39,7 @@ function PersonalInfo(props) {
       dispatch(updateErrorMessages({ key, value: '' }));
     }
   };
-
+  if (!isLoaded) return null;
   return (
     <div style={{ padding: "15px", textAlign: "left" }}>
       <ProfilePicUploadComponent />
