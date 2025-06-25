@@ -24,7 +24,7 @@ function Home() {
 
     return (
         <>
-            <HeaderPage
+{/*             <HeaderPage
                 backgroundImage={AboutBannerImage}
                 headerText={<>
                     Resume <span style={{ color: "green" }}>Builder </span>
@@ -38,7 +38,7 @@ function Home() {
                     height: "auto",
                 }}
                 buttonAction2={scrollToSection}
-            />
+            /> */}
             <div style={{ minWidth: '300px' }}>
 
 
